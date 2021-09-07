@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Product;
 use App\Comic;
 
 class ComicController extends Controller
@@ -15,15 +14,13 @@ class ComicController extends Controller
     public function comics()
     {
 
-    //     $comics = config('comics');
-    //     $data = ['series' => $comics];
-
-    // dd( Comic::all() );
-
-    //     return view('comics', $data);
+         /**
+        * @comics
+        */
 
         $comics = Comic::all();
-
+         
+        // dd (Comic::all())
         return view('comics')->with('series',$comics);
 
         // come alternativa
@@ -31,4 +28,18 @@ class ComicController extends Controller
         
 
     }
+
+         /**
+        * @show
+        */
+
+        public function show($id) 
+        {
+
+        $serie = Comic::where('id',$id)->first();
+        // dd($serie);
+        return view('detail', compact('serie'));
+        }
+
 }
+

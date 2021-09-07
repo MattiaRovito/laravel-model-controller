@@ -41,3 +41,6 @@ Route::get('/fans', 'HomeController@fans')->name('sezione-fans');
  */
 
 Route::get('/comics', 'ComicController@comics')->name('sezione-comics');
+
+
+Route::get('/detail/{id}', 'ComicController@show')->name('sezione-details');

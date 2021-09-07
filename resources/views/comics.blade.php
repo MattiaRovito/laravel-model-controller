@@ -11,7 +11,7 @@
                 <img src="{{ $serie['thumb']}}" alt="{{ $serie['title']}}">
                 
                 <h2>
-                    <a href=""> {{ $serie['series']}} </a>
+                    <a href="{{route('sezione-details', ['id' => $serie->id])}}"> {{ $serie['series']}} </a>
 
                     {{-- <a href="{{ route('sezione-detail', ['id' => $formato->id])}} "> {{ $serie['series']}} </a> --}}
                 </h2>
