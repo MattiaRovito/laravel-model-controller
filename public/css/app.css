@@ -35,6 +35,10 @@ h1, h2 {
   flex-wrap: wrap;
 }
 
+.white {
+  color: white;
+}
+
 .box {
   width: 150px;
   height: 150px;
