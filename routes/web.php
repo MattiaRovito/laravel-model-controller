@@ -13,46 +13,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('homepage');
 
-Route::get('/characters', function () {
-    return view('characters');
-})->name('sezione-characters');
+/**
+ * Route dell'HomeController
+ */
+Route::get('/', 'HomeController@home') ->name('homepage');
 
-Route::get('/movies', function () {
-    return view('movies');
-})->name('sezione-movies');
+Route::get('/characters', 'HomeController@characters')->name('sezione-characters');
 
-Route::get('/tv', function () {
-    return view('tv');
-})->name('sezione-tv');
+Route::get('/movies', 'HomeController@movies')->name('sezione-movies');
 
-Route::get('/games', function () {
-    return view('games');
-})->name('sezione-games');
+Route::get('/tv', 'HomeController@tv')->name('sezione-tv');
 
-Route::get('/collectibles', function () {
-    return view('collectibles');
-})->name('sezione-collectibles');
+Route::get('/games', 'HomeController@games')->name('sezione-games');
 
-Route::get('/videos', function () {
-    return view('videos');
-})->name('sezione-videos');
+Route::get('/collectibles', 'HomeController@collectibles')->name('sezione-collectibles');
 
-Route::get('/fans', function () {
-    return view('fans');
-})->name('sezione-fans');
+Route::get('/videos', 'HomeController@videos')->name('sezione-videos');
+
+Route::get('/fans', 'HomeController@fans')->name('sezione-fans');
 
 
 
 
-Route::get('/comics', function () {
+/**
+ * Route del ComicsController
+ */
 
-    $comics = config('comics');
-    $data = ['series' => $comics];
-
-
-    return view('comics', $data);
-})->name('sezione-comics');
+Route::get('/comics', 'ComicController@comics')->name('sezione-comics');

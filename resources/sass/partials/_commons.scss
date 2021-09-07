@@ -22,9 +22,13 @@ main
     background-color: #1c1c1c;
 }
 
-main a
+main
 {
-    color: white;
+    a
+    {
+        color: white;
+    }
+    
 }
   
 a
@@ -43,4 +47,8 @@ h1
 .flex
 {
     display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
 }
+
+
