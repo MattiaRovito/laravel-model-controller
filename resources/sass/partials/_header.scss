@@ -1,0 +1,50 @@
+.box
+{
+    width: 150px;
+    height: 150px;
+}
+
+.logo
+{
+    float: left;
+}
+
+header 
+{
+    li
+    {
+        float: left;
+        list-style-type: none;
+        margin-left: 20px;
+        margin-top: 50px;
+    }
+    
+}
+
+
+header
+{
+    li:first-child
+    {
+        margin-left: 100px;
+    }
+}
+
+a
+{
+    color: black;
+    font-weight: bold;
+}
+
+header
+{
+    margin-bottom: 30px;
+}
+
+
+.clearfix::after 
+{
+    content: "";
+    clear: both;
+    display: table;
+}
